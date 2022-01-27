@@ -1,22 +1,15 @@
 import './App.css';
 import React, { Component } from 'react';
-import axios from 'axios';
 import Navbar from './components/Navbar';
+import Displayer from './components/Displayer';
 
 class App extends Component {
-  state = {
-    videos : []
-  }
-  componentDidMount(){
-    axios.get('http://localhost:5000/video').then(res =>{
-        this.setState({videos: res.data}) 
-    })
-  }
 
   render() {
     return (
       <div className='app'>
         <Navbar/>
+        <Displayer />
       </div>
     );
   }

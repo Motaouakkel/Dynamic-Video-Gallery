@@ -1,0 +1,112 @@
+.displayer-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    padding: 20px;
+}
+
+.main-video{
+    width: 65%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: fit-content;
+}
+
+.main-video video{
+    width: 100%;
+    border-radius: 10px;
+}
+.main-video .title-main-video{
+    font-size: 20px;
+    color: #222831;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.list-videos{
+    width: 35%;
+    height: 81vh;
+    margin-left: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+
+#list-videos::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#list-videos::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#list-videos::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+
+.list-videos .list-item{
+    display: flex;
+    width: 97.5%;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #e8e8e9a2;
+    cursor: pointer;
+}
+
+.list-videos .list-item.active{
+    background-color: #115173;
+    color: #fff;
+}
+
+.list-videos .list-item video{
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.list-videos .list-item .title-list-item{
+    width: 60%;
+    font-size: 18px;
+    margin: auto;
+}
+
+@media screen and (max-width: 980px) {
+    .displayer-container{
+        display: inline;
+    }
+    .main-video{
+        width: 97%;
+        margin: 0px 10px;
+    }
+    .list-videos{
+        width: 97%;
+        margin: 10px;
+        
+    }
+    .list-videos .list-item{
+        width: 97.7%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .list-videos .list-item video{
+        width: 20%;
+        margin: 10px;
+        border-radius: 10px;
+    }
+    .list-videos .list-item .title-list-item{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+}

@@ -24,7 +24,7 @@ app.get('/video' , (req,res)=>{
 
 app.get("/video/:videoName", function (req, res) {
   
-  //console.log(req.headers);
+  // console.log(req.headers);
 
   // Ensure there is a range given for the video
   const range = req.headers.range;
@@ -37,7 +37,7 @@ app.get("/video/:videoName", function (req, res) {
   const coursName  = req.params.CoursName;
   const chapter  = req.params.chapter;
   const videoName  = req.params.videoName;
-  const videoPath = `/video/${videoName}`;
+  const videoPath = `short-video/${videoName}`;
   const videoSize = fs.statSync(videoPath).size;
   //console.log(videoSize)
 
